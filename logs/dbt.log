@@ -1,0 +1,30 @@
+[0m22:52:36.413793 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182CD8E2B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182CD8E3850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182CD8EC850>]}
+
+
+============================== 22:52:36.452484 | 41d0bfff-47c8-499c-b635-85bf50ede2f4 ==============================
+[0m22:52:36.452484 [info ] [MainThread]: Running with dbt=1.11.6
+[0m22:52:36.452484 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\User\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt init food_prices', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m22:52:36.493924 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\User\.dbt
+[0m22:52:36.497955 [debug] [MainThread]: Starter project path: C:\Users\User\Desktop\food-analytics-project\venv\Lib\site-packages\dbt\include\starter_project
+[0m22:52:36.679052 [info ] [MainThread]: 
+Your new dbt project "food_prices" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m22:52:36.681945 [info ] [MainThread]: Setting up your profile.
+[0m22:55:37.630069 [info ] [MainThread]: Profile food_prices written to C:\Users\User\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m22:55:37.630069 [debug] [MainThread]: Command `dbt init` succeeded at 22:55:37.630069 after 181.33 seconds
+[0m22:55:37.630069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182C6BCB6D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182CD9191D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182C6BD9350>]}
+[0m22:55:37.638808 [debug] [MainThread]: Flushing usage events
+[0m22:55:39.468294 [debug] [MainThread]: An error was encountered while trying to flush usage events
