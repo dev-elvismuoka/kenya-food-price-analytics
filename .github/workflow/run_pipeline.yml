@@ -1,0 +1,35 @@
+name: Weekly Food Price Update
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs every Monday at 00:00
+  workflow_dispatch: # Allows you to run it manually from GitHub
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install dbt-postgres
+
+      - name: Run Ingestion
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: python ingest_data.py
+
+      - name: Run dbt Transformations
+        env:
+          DBT_ENV_SECRET_DB_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          cd food_prices
+          dbt run --profiles-dir .
