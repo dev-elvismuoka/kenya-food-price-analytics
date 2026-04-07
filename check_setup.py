@@ -8,7 +8,7 @@ load_dotenv()
 db_url = os.getenv("DATABASE_URL")
 
 if db_url:
-    print("✅ Success! Your .env file is set up correctly.")
+    print(" Success! Your .env file is set up correctly.")
     print(f"Connection string found for host: {db_url.split('@')[1].split('/')[0]}")
 else:
-    print("❌ Error: I can't find the DATABASE_URL. Check your .env file name!")
+    print(" Error: I can't find the DATABASE_URL. Check your .env file name!")

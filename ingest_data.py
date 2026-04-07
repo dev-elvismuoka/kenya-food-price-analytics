@@ -26,7 +26,7 @@ try:
     # Clean it up: Drop empty prices and just grab the latest 1,000 records to keep it fast
     latest_data = real_data[['date', 'market', 'commodity', 'price']].dropna().tail(1000)
     
-    print(f"✅ Found the data! Pushing {len(latest_data)} records to Neon...")
+    print(f" Found the data! Pushing {len(latest_data)} records to Neon...")
 
     # 4. Connect to your Neon database
     conn = psycopg2.connect(db_url)
@@ -46,7 +46,7 @@ try:
     cursor.close()
     conn.close()
     
-    print("✅ Maize and Beans data successfully saved to your database!")
+    print(" Maize and Beans data successfully saved to your database!")
 
 except Exception as e:
-    print(f"❌ Error: {e}")
+    print(f" Error: {e}")
