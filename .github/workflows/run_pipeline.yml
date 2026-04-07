@@ -2,7 +2,8 @@ name: Weekly Food Price Update
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs every Monday at 00:00
+    - cron: '0 0 
+     Runs every Monday at 00:00
   workflow_dispatch: # Allows you to run it manually from GitHub
 
 jobs:
@@ -27,9 +28,9 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: python ingest_data.py
 
-      - name: Run dbt Transformations
+       - name: Run dbt models
         env:
-          DBT_ENV_SECRET_DB_URL: ${{ secrets.DATABASE_URL }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }} 
         run: |
           cd food_prices
           dbt run --profiles-dir .

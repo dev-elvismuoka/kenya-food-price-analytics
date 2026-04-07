@@ -1,0 +1,13 @@
+food_prices:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: ep-sparkling-meadow-abyt2l5n-pooler.eu-west-2.aws.neon.tech
+      user: neondb_owner
+      password: "{{ env_var('DB_PASSWORD') }}"
+      port: 5432
+      dbname: neondb
+      schema: public
+      threads: 1
+      sslmode: require
